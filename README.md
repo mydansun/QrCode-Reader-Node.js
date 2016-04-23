@@ -10,4 +10,4 @@ How to use?
 node main.js
 ```
 You can also use the online version
-http://qr.api.onlyke.com/reader?url=...
+https://qr.api.onlyke.com/reader?url=[image_url]
