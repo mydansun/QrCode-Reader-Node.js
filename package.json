@@ -1,0 +1,17 @@
+{
+  "name": "qr-code-reader",
+  "version": "1.0.0",
+  "description": "QrCode Reader for Node.js",
+  "main": "main.js",
+  "dependencies": {
+    "bufferhelper": "^0.2.1",
+    "get-image-data": "^2.2.1",
+    "iconv-lite": "^0.4.13"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "mydansun",
+  "license": "ISC"
+}

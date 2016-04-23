@@ -1,0 +1,10 @@
+{
+  "name": "get-image-data-tests",
+  "version": "1.0.0",
+  "description": "get-image-data tests",
+  "main": "server.js",
+  "browser": "browser.js",
+  "browserify": {
+    "transform": ["brfs"]
+  }
+}
