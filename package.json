@@ -1,17 +1,24 @@
 {
   "name": "qr-code-reader",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "QrCode Reader for Node.js",
   "main": "main.js",
-  "dependencies": {
-    "bufferhelper": "^0.2.1",
-    "get-image-data": "^2.2.1",
-    "iconv-lite": "^0.4.13"
-  },
-  "devDependencies": {},
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/mydansun/QrCode-Reader-Node.js.git"
+  },
   "author": "mydansun",
-  "license": "ISC"
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/mydansun/QrCode-Reader-Node.js/issues"
+  },
+  "homepage": "https://github.com/mydansun/QrCode-Reader-Node.js#readme",
+  "dependencies": {
+    "get-image-data": "^2.2.1",
+    "random-string": "^0.1.2",
+    "superagent": "^1.8.3"
+  }
 }

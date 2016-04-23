@@ -1,8 +1,8 @@
 var http = require('http');
 var url = require('url');
 var fs = require("fs");
-var httpHelper = require("./modules/httpHelper.js");
-var randomWords = require("./modules/randomWords.js");
+var superagent = require('superagent');
+var randomString = require('random-string');
 
 image = require('get-image-data');
 BitMatrix = require("./jsqrcode/bitmat.js");
@@ -86,32 +86,36 @@ http.createServer(function (req, res) {
     options.method = 'GET';
     options.buffer = true;
     console.log("--------------------" + getNowFormatDate() + "--------------------");
-    console.log("Start download: "+arg.url);
-    httpHelper.request(options, 3000, {}, function (err, data) {
-        if (err) {
-            console.log(err);
-            res.writeHead(200, {'Content-Type': 'application/json'});
-			res.end(JSON.stringify({status:0,error:'Unable to download the image'}));
-        }else{
-            var localFile = './downloads/' + (new Date()).valueOf() + "_" + randomWords(false,6) + ".file";
-            fs.writeFile(localFile, data,function(err) {
-                if (err) {
-                    res.writeHead(200, {'Content-Type': 'application/json'});
-                    res.end(JSON.stringify({status:0,error:'Image save failed'}));
-                    return;
-                }
-                console.log("Writing completed: " + localFile);
-                console.log("Start decode: " + localFile);
-                qrcode.decode(localFile,function(status,result){
-                    fs.unlink(localFile);
-                    if(result !== null){
+    console.log("Start download: " + target);
+    superagent
+        .get(target)
+        .buffer(true)
+        .timeout(10000)
+        .redirects(3)
+        .end(function (err, sres) {
+            if (err) {
+                console.log(err);
+                res.writeHead(200, {'Content-Type': 'application/json'});
+                res.end(JSON.stringify({status:0,error:err.message}));
+            }else{
+                var localFile = './downloads/' + (new Date()).valueOf() + "_" + randomString({length: 6}) + ".file";
+                fs.writeFile(localFile, sres.body,function(err) {
+                    if (err) {
                         res.writeHead(200, {'Content-Type': 'application/json'});
-                        res.end(JSON.stringify({status:status,content:result}));
+                        res.end(JSON.stringify({status:0,error:'Image save failed'}));
+                        return;
                     }
+                    console.log("Writing completed: " + localFile);
+                    console.log("Start decode: " + localFile);
+                    qrcode.decode(localFile,function(status,result){
+                        fs.unlink(localFile);
+                        if(result !== null){
+                            res.writeHead(200, {'Content-Type': 'application/json'});
+                            res.end(JSON.stringify({status:status,content:result}));
+                        }
+                    });
                 });
-            });
-        }
-    });
-
+            }
+        });
 }).listen(port);
 console.log('Server running at port ' + port +' on ' + getNowFormatDate());
