@@ -63,8 +63,8 @@ http.createServer(function (req, res) {
 	var pathname = url.parse(req.url).pathname;
 	var arg = url.parse(req.url, true).query;
 	if(pathname != '/reader'){
-		res.writeHead(404, {'Content-Type': 'application/json'});
-		res.end(JSON.stringify({status:0,error:'Bad request'}));
+		res.writeHead(302, {'Location': 'https://mydansun.github.io/QrCode-Reader-Node.js/'});
+        res.end();
 		return;
 	}
 
