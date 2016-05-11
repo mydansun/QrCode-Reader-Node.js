@@ -1,6 +1,8 @@
 # QrCode-Reader-Node.js
 QrCode Reader for Node.js
 
+Find and identify the QRCode in the picture
+
 JavaScript QRCode reader for Node.js
 
 This is a port of LazarSoft / jsqrcode https://github.com/LazarSoft/jsqrcode
@@ -14,6 +16,8 @@ node main.js
 https://qr.api.onlyke.com/reader?url=[image_url]
 
 A example: https://qr.api.onlyke.com/reader?url=https://github.com/mydansun/QrCode-Reader-Node.js/raw/master/test/test.jpg
+
+![The example image](https://qr.api.onlyke.com/reader?url=https://github.com/mydansun/QrCode-Reader-Node.js/raw/master/test/test.jpg)
 
 ## Return data
 
@@ -37,6 +41,8 @@ A example: https://qr.api.onlyke.com/reader?url=https://github.com/mydansun/QrCo
 # QrCode-Reader-Node.js
 实现图片中的二维码识别，基于Node.js
 
+找到并识别图片中的二维码
+
 基于 LazarSoft / jsqrcode https://github.com/LazarSoft/jsqrcode
 
 ## 本地部署
@@ -48,6 +54,7 @@ node main.js
 https://qr.api.onlyke.com/reader?url=[图片地址]
 
 一个例子： https://qr.api.onlyke.com/reader?url=https://github.com/mydansun/QrCode-Reader-Node.js/raw/master/test/test.jpg
+![样例图片](https://qr.api.onlyke.com/reader?url=https://github.com/mydansun/QrCode-Reader-Node.js/raw/master/test/test.jpg)
 
 ## 返回数据
 
