@@ -17,7 +17,7 @@ https://qr.api.onlyke.com/reader?url=[image_url]
 
 A example: https://qr.api.onlyke.com/reader?url=https://github.com/mydansun/QrCode-Reader-Node.js/raw/master/test/test.jpg
 
-![The example image](https://qr.api.onlyke.com/reader?url=https://github.com/mydansun/QrCode-Reader-Node.js/raw/master/test/test.jpg)
+![The example image](https://github.com/mydansun/QrCode-Reader-Node.js/raw/master/test/test.jpg)
 
 ## Return data
 
@@ -54,7 +54,7 @@ node main.js
 https://qr.api.onlyke.com/reader?url=[图片地址]
 
 一个例子： https://qr.api.onlyke.com/reader?url=https://github.com/mydansun/QrCode-Reader-Node.js/raw/master/test/test.jpg
-![样例图片](https://qr.api.onlyke.com/reader?url=https://github.com/mydansun/QrCode-Reader-Node.js/raw/master/test/test.jpg)
+![样例图片](https://github.com/mydansun/QrCode-Reader-Node.js/raw/master/test/test.jpg)
 
 ## 返回数据
 
