@@ -12,7 +12,7 @@ How to use?
 ```sh
 node main.js
 ```
-## Online version
+## Online version (Suspended)
 https://qr.api.onlyke.com/reader?url=[image_url]
 
 A example: https://qr.api.onlyke.com/reader?url=https://github.com/mydansun/QrCode-Reader-Node.js/raw/master/test/test.jpg
@@ -50,7 +50,7 @@ A example: https://qr.api.onlyke.com/reader?url=https://github.com/mydansun/QrCo
 ```sh
 node main.js
 ```
-## 在线版本
+## 在线版本（暂停使用）
 https://qr.api.onlyke.com/reader?url=[图片地址]
 
 一个例子： https://qr.api.onlyke.com/reader?url=https://github.com/mydansun/QrCode-Reader-Node.js/raw/master/test/test.jpg
